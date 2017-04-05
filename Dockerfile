@@ -14,5 +14,7 @@ RUN npm install
 COPY default /etc/nginx/sites-enabled/default
 COPY config.json /openhab-cloud
 COPY startupScript.sh /openhab-cloud
+COPY renew_cron /openhab-cloud
+RUN crontab /openhab-cloud/renew_cron
 
 CMD ["/bin/bash", "/openhab-cloud/startupScript.sh"]
