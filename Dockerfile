@@ -2,7 +2,7 @@ FROM ubuntu:16.04
 
 RUN apt-get -y update && \
     apt-get -y upgrade && \
-    apt-get -y install nginx build-essential redis-server mongodb python git letsencrypt curl python-software-properties
+    apt-get -y install nginx build-essential redis-server mongodb python git curl python-software-properties
 
 RUN curl -sL https://deb.nodesource.com/setup_7.x | bash -
 RUN apt-get -u install nodejs
